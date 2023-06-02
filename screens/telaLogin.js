@@ -65,7 +65,10 @@ const TelaLogin = () => {
         value={senha}
         onChangeText={(text) => setSenha(text)}
       />
-      <Button title="Login" onPress={login} />
+      
+      <TouchableOpacity style={styles.loginButton} onPress={login}>
+  <Text style={styles.loginButtonText}>Login</Text>
+</TouchableOpacity>
       <TouchableOpacity style={styles.txtCriarConta} onPress={criarConta}>
        
         <Text style={styles.txtCriarConta}> Criar conta </Text>
@@ -80,6 +83,17 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  loginButton: {
+    backgroundColor: "#00bfff",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    marginTop: 10,
+  },
+  loginButtonText: {
+    color: "#FFFFFF",
+    fontWeight: "bold",
   },
   input: {
     width: "100%",
@@ -98,9 +112,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   txtCriarConta: {
-    color: "black",
-    marginBottom: 50,
-    marginTop: 20,
+    color: "#0000FF",
+  marginBottom: 50,
+  marginTop: 20,
+  textDecorationLine: "underline",
   },
 });
 

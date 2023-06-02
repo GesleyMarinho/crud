@@ -181,15 +181,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   updateButton: {
-    backgroundColor: "#FF4500",
+    backgroundColor: "#00bfff",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
-    alignItems: "center",
+    alignItems: "center",shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 3,
   },
   updateButtonText: {
     color: "#FFFFFF",
-    fontWeight: "bold",
+  fontWeight: "bold",
+  fontSize: 16,
   },
   modalContainer: {
     flex: 1,
@@ -211,7 +214,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   confirmButton: {
-    backgroundColor: "#FF4500",
+    backgroundColor: "#00bfff",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
