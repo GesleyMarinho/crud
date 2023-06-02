@@ -2,12 +2,16 @@ import React from "react";
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
+
 const Menu = ({ navigation }) => {
-  const listarCadastro = () => {
+
+  const Lista = () => {
+    navigation.navigate("Lista");
     console.log("listar cadastro");
   };
 
   const deletarUser = () => {
+    navigation.navigate("Deletar");
     console.log("Deletar User !");
   };
 
@@ -17,7 +21,7 @@ const Menu = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={listarCadastro}>
+      <TouchableOpacity style={styles.button} onPress={Lista}>
         <Text style={styles.buttonText}>Listar Cadastros</Text>
         <Icon name="users" size={20} color="#FFFFFF" />
       </TouchableOpacity>
@@ -41,8 +45,8 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: "#FF4500",
-    paddingVertical: 20,
-    paddingHorizontal: 40,
+    paddingVertical: 40,
+    paddingHorizontal: 60,
     borderRadius: 5,
     marginBottom: 10,
     flexDirection: "row",
@@ -51,7 +55,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#FFFFFF",
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: "bold",
     marginRight: 10,
   },

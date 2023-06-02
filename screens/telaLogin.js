@@ -67,6 +67,7 @@ const TelaLogin = () => {
       />
       <Button title="Login" onPress={login} />
       <TouchableOpacity style={styles.txtCriarConta} onPress={criarConta}>
+       
         <Text style={styles.txtCriarConta}> Criar conta </Text>
       </TouchableOpacity>
     </View>

@@ -60,7 +60,6 @@ const Cadastro = () => {
         <TouchableOpacity
           style={styles.salvarCadastrado}
           onPress={() => salvarCadastro()}
-          //onPress={salvarCadastro}
         >
           <Text style={styles.salvar}>Salvar</Text>
         </TouchableOpacity>
