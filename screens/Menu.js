@@ -16,6 +16,7 @@ const Menu = ({ navigation }) => {
   };
 
   const atualizarCadastro = () => {
+    navigation.navigate("Atualizar")
     console.log("Atualizar cadastro !");
   };
 

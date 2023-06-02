@@ -10,16 +10,13 @@ import {
 import { db } from "../screens/database";
 
 const Deletar = () => {
-
   const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
     listarUsuarios();
-   
   }, []);
 
   const listarUsuarios = () => {
-  
     db.transaction((tx) => {
       tx.executeSql(
         "SELECT * FROM cadastro",
@@ -35,7 +32,8 @@ const Deletar = () => {
   };
 
   const confirmaEclusao = (usuario) => {
-    Alert.alert("Ecluir usuário", "Deseja excluir o usário ${usuario.nome} ?", [
+    Alert.alert("Ecluir usuário", 
+    `Deseja excluir o usário ${usuario.nome} ?`, [
       {
         text: "Cancelar",
         style: "Cancel",
@@ -47,6 +45,8 @@ const Deletar = () => {
       },
     ]);
   };
+
+ 
 
   const excluirUsuario = (usuario) => {
     db.transaction((tx) => {

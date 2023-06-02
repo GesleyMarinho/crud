@@ -5,6 +5,7 @@ import Cadastro from "../screens/Cadastro";
 import Menu from "../screens/Menu";
 import Lista from "../views/Lista";
 import Deletar from "../views/Deletar";
+import Atualizar from "../views/Atualizar";
 
 
 const stack = createStackNavigator();
@@ -18,6 +19,7 @@ const Navigation = () => {
         <stack.Screen name="Menu" component={Menu} />
         <stack.Screen name="Lista" component={Lista} />
         <stack.Screen name="Deletar" component={Deletar} />
+        <stack.Screen name="Atualizar" component={Atualizar} />
       </stack.Navigator>
     </NavigationContainer>
   );
