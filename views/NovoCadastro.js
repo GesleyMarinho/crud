@@ -14,12 +14,14 @@ import Constants from "expo-constants";
 import { db, createTable } from "../screens/database";
 import { useNavigation } from "@react-navigation/native";
 
-const Cadastro = () => {
+const NovoCadastro = () => {
   const [nome, setNome] = useState("");
   const [senha, setSenha] = useState("");
   const [idade, setIdade] = useState("");
   const [sexo, setSexo] = useState("");
   const navigation = useNavigation();
+
+  console.log ("novo Cadastro");
 
   useEffect(() => {
     createTable();
@@ -82,33 +84,33 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 100,
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: "#ecf0f1",
+    backgroundColor: "#ecf0f1", 
     padding: 8,
   },
 
   label: {
     fontSize: 16,
-    backgroundColor: "#FFF",
+    backgroundColor: "#FFF", 
   },
   input: {
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "#ddd", 
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginBottom: 10,
   },
   salvarCadastrado: {
-    marginTop: 15,
-    backgroundColor: "#FF4500",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-    alignSelf: "center",
-  },
+  marginTop: 15,
+  backgroundColor: "#4ee44e", // Outra tonalidade de verde
+  paddingVertical: 10,
+  paddingHorizontal: 20,
+  borderRadius: 5,
+  alignSelf: "center",
+},
   salvar: {
     fontSize: 16,
   },
 });
 
-export default Cadastro;
+export default NovoCadastro;

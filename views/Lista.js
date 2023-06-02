@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
-  FlatList,
+  ScrollView,
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
@@ -30,27 +30,22 @@ const Lista = () => {
   return (
     <TouchableOpacity style={styles.button}>
       <Text style={styles.center}>Listagem dos Usuários </Text>
-      <FlatList
-        data={cadastros}
-        renderItem={({ item }) => (
-          <View style={styles.itemContainer}>
+      <ScrollView style={styles.scrollView}>
+        {cadastros.map((item) => (
+          <View key={item.id} style={styles.itemContainer}>
             <Text style={styles.itemText}>
-              Nome: {item.nome} - Idade: {item.idade} anos - Sexo: {item.sexo}
+              Nome: {item.nome} - Idade: {item.idade} anos - Sexo: {item.sexo} - Senha: {item.senha}
             </Text>
           </View>
-        )}
-        keyExtractor={(item) => item.id.toString()}
-        style={styles.flatListContainer}
-      />
+        ))}
+      </ScrollView>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  button: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     padding: 20,
   },
   center: {
@@ -59,9 +54,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 10,
   },
-  listContainer: {
-    flexGrow: 1,
-    width: "100%",
+  scrollView: {
+    flex: 1,
   },
   itemContainer: {
     backgroundColor: "#FFA500",

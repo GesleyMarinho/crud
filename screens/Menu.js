@@ -20,6 +20,11 @@ const Menu = ({ navigation }) => {
     console.log("Atualizar cadastro !");
   };
 
+  const registrarUsuario =() =>{
+    navigation.navigate("NovoCadastro");
+    console.log ("Cadastro pelo Menu !");
+  }
+
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={Lista}>
@@ -33,6 +38,11 @@ const Menu = ({ navigation }) => {
 
       <TouchableOpacity style={styles.button} onPress={atualizarCadastro}>
         <Text style={styles.buttonText}>Atualizar Cadastros</Text>
+        <Icon name="user-plus" size={20} color="#FFFFFF" />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={registrarUsuario}>
+        <Text style={styles.buttonText}>Novo Cadastro</Text>
         <Icon name="user-plus" size={20} color="#FFFFFF" />
       </TouchableOpacity>
     </View>
